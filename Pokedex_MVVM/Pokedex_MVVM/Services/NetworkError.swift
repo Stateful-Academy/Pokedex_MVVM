@@ -10,9 +10,9 @@ import Foundation
 enum NetworkError: Error, LocalizedError {
     case unexpectedError
     case requestError(Error)
-    case badURL
+    case badURL(URL?)
     case couldNotUnwrap
-    case errorDecoding
+    case errorDecoding(Error)
     
     var localizedDescription: String {
         switch self {
@@ -25,7 +25,8 @@ enum NetworkError: Error, LocalizedError {
         case .errorDecoding:
             return "Error ecountered when decoding the data"
         case .unexpectedError:
-            return ""
+            return "Hmm.. Something went wrong"
         }
     }
 }
+

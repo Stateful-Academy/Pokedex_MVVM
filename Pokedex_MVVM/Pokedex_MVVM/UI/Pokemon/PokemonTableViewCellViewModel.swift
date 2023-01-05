@@ -17,6 +17,7 @@ class PokemonTableViewCellViewModel {
     
     weak var delegate: PokemonTableViewCellViewModelDelegate?
     
+    // Dependency Injection
     init(pokedex: PokemonResults, delegate: PokemonTableViewCellViewModelDelegate, pokemonService: PokemonServiceable = PokemonService()) {
         self.delegate = delegate
         self.pokedex = pokedex

@@ -27,6 +27,7 @@ class PokemonDetailViewController: UIViewController {
         if let sprite = viewModel.spriteImage {
             pokemonSpriteImageView.image = sprite
         }
+        // Read right to left
         self.pokemonNameLabel.text = viewModel.pokemon.name.capitalized
         self.pokemonIDLabel.text = "No: \(viewModel.pokemon.id)"
     }

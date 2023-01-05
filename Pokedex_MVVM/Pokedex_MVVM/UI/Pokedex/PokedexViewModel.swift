@@ -19,6 +19,7 @@ class PokedexViewModel {
     var pokedexResults: [PokemonResults] = []
     weak var delegate: PokedexTableviewDelegate?
     
+    // Depencey Injection
     init(delegate: PokedexTableviewDelegate, pokedexService: PokedexServiceable = PokedexService()) {
         self.delegate = delegate
         self.pokedexService = pokedexService

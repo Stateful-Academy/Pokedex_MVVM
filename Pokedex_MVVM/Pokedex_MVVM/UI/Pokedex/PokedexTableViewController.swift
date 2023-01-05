@@ -51,28 +51,10 @@ class PokedexTableViewController: UITableViewController {
                       let cell = sender as? PokemonTableViewCell,
         let pokemon = cell.viewModel.pokemon else {return}
         let sprite = cell.pokemonImageView.image
+        // Injecting the data we need.
         destinationVC.viewModel = PokemonDetailViewModel(pokemon: pokemon, image: sprite)
     }
 }
-//
-//                let pokemonToSend = self.pokedexViewModel.pokedexResults[indexPath.row]
-//                destinationVC.viewModel = PokemonDetailViewModel(pokemon: pokemonToSend)
-// don't need t fetch we have it. Destination.viewM = cell.view
-// pokemonViewModel
-
-//                NetworkingController.fetchPokemon(with: pokemonToSend.url) { result in
-//                    switch result {
-//                    case .success(let pokemon):
-//                        DispatchQueue.main.async {
-//                            destinationVC.pokemon = pokemon
-//                        }
-//                    case .failure(let error):
-//                        print("There was an error!", error.errorDescription!)
-//                    }
-////                }
-//            }
-//        }
-
 
 extension PokedexTableViewController: PokedexTableviewDelegate {
     func pokedexResultsLoadedSuccessfully() {
